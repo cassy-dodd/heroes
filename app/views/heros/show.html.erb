@@ -1,9 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1><%= @hero.superpower %></h1>
+      <h1><%= @hero.title %></h1>
       <table class="table table-bordered">
         <tbody>
+          <tr>
+            <th scope="row"></th>
+          </tr>
+          <tr>
+            <th scope="row">Superpower</th>
+            <td><%= @hero.superpower %></td>
+          </tr>
+          <tr>
+            <th scope="row">Description</th>
+            <td><%= @hero.description %></td>
+          </tr>
           <tr>
             <th scope="row">City</th>
             <td><%= @hero.city %></td>
@@ -13,12 +24,12 @@
             <td><%= @hero.price %></td>
           </tr>
           <tr>
-            <th scope="row">Description</th>
-            <td><%= @hero.description %></td>
-          </tr>
-          <tr>
             <th scope="row">Availability</th>
             <td><%= @hero.availability %></td>
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+  <%= link_to "Back to Heroes", heros_path  %>
+</div>
