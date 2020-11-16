@@ -4,6 +4,7 @@
       <h1>Create a new Hero</h1>
 
       <%= simple_form_for @hero do |f| %>
+        <%= f.input :title %>
         <%= f.input :superpower %>
         <%= f.input :price %>
         <%= f.input :description %>
