@@ -5,7 +5,10 @@
       <table class="table table-bordered">
         <tbody>
           <tr>
-            <th scope="row"></th>
+            <th scope="row">Hero</th>
+            <% if @hero.photo.attached? %>
+            <td><%= cl_image_tag @hero.photo.key, height: 300, width: 400, crop: :fill %></td>
+            <% end %>
           </tr>
           <tr>
             <th scope="row">Superpower</th>

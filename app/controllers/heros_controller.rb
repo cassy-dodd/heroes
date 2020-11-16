@@ -29,6 +29,6 @@ class HerosController < ApplicationController
   private
 
   def hero_params
-    params.require(:hero).permit(:title, :superpower, :price, :description, :city, :availability)
+    params.require(:hero).permit(:title, :superpower, :price, :description, :city, :availability, :photo)
   end
 end

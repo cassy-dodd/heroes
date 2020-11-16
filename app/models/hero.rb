@@ -1,4 +1,6 @@
 class Hero < ApplicationRecord
+  has_one_attached :photo
+
   validates :title, presence: true
   validates :superpower, presence: true
   validates :city, presence: true
