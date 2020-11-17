@@ -1,0 +1,22 @@
+<div class="booking-widget" >
+  <p class="price"> <strong> <%= @hero.price %> € </strong></p>
+  <%= simple_form_for([@hero, @booking]) do |f| %>
+    <div class="date-picker">
+      <%= f.input :date, class: "date-label" %>
+    </div>
+    <div class="time-picker">
+      <%= f.input :start_time, class: "start-time-picker" %>
+      <%= f.input :end_time, class: "start-time-picker" %>
+    </div>
+    <div class="form-actions mb-2 rounded">
+      <%= f.submit "book", class: "book-button btn" %>
+    </div>
+  <% end %>
+  <div class="text-center booking-comment">
+    <p>To be paid in cash to your hero</p>
+  </div>
+  <div class="d-flex justify-content-between total-price">
+    <p>Total price</p>
+    <p><%= @hero.price %>€</p>
+  </div>
+</div>
