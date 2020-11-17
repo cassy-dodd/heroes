@@ -31,7 +31,7 @@ gem 'devise'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# gem 'autoprefixer-rails'
+gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
