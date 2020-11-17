@@ -1,6 +1,15 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  // border: 2px black solid;
+  box-shadow: 3px 3px 3px $medium-gray;
+
+ }
+
+ .navbar {
+  position: fixed;
+  width: 100%;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +19,48 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.heroes-text {
+  font-family: $hero-font;
+  display: flex;
+
+}
+
+.fas {
+  font-size: 24px;
+  padding: 2px 0 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  .left-item {
+    border-right: 1px solid red;
+  }
+  .text-color {
+    color: black !important;
+  }
+  .padding-left {
+    padding: 8px;
+  }
+  .padding-right {
+    padding: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
