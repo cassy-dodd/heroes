@@ -8,16 +8,16 @@
 }
  .font-container {
   width: 40%;
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  height: 100%;
  }
 
 .tag-line {
   font-size: 70px;
   font-weight: bold;
-  font-family: $tag-line-font;
   text-shadow: 3px 3px 10px $gray;
   letter-spacing: 1px;
   color: white;
-  padding: 0 0 15px 30px;
-
+  padding-left: 30px;
 }
