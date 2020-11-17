@@ -1,12 +1,47 @@
-<footer class = "footer navbar-fixed-bottom pt-5">
-  <div class = "size pt-3" style="background-color:white">
-    <nav>
-      <ul class = "d-flex justify-content-around bullets">
-        <li><%=link_to "About", '#'%></li>
-        <li><%=link_to "Contact Us", '#' %></li>
-        <li><%=link_to "Community", '#' %></li>
-        <li><%=link_to "Terms of Use", '#'%></li>
+
+<div class="footer navbar-fixed-bottom pt-2 ">
+  <div class="footer-content">
+
+    <div class="footer-section about pt-16">
+      <h4 class="new_font">Heroes</h4>
+      <ul class="bullets center pb-4">
+        <li><%=link_to "Our Team","#",class: "links"%></li>
+        <li><%=link_to "Our Customers","#",class: "links"%></li>
+         <li><%=link_to "Jobs","#",class: "links"%></li>
+        <li><%=link_to "Privacy Policy","#",class: "links"%></li>
       </ul>
-    </nav>
+
+      <div class="socials">
+        <h4 class ="new_font pt-4">Connect With Us</h4>
+        <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram-square"></i>
+      </div>
+      </div>
+    </div>
+
+    <div class="footer-section quick-links">
+      <h4>Quick Links</h4>
+      <ul class="bullets">
+        <li><%=link_to "Events", "#", class: "links"%></li>
+        <li><%=link_to "Community", "#",class: "links"%></li>
+        <li><%=link_to "Memorable Experiences", "#",class: "links"%></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-section contact">
+      <h4>Contact</h4>
+      <form action="index.html" method = "post">
+      <input type = "email" name= "email" class= "text-input mb-4 border" placeholder = "Your email address">
+      <textarea name= "message" class = "text-input mb-4 pb-5" placeholder="Your message"></textarea>
+      <button type="submit" class="btn btn-danger">
+        Send
+      </button>
+    </form>
+    </div>
   </div>
-</footer>
+
+</div>
+
+
