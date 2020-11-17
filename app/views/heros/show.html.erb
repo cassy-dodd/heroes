@@ -1,38 +1,14 @@
-<div class="container mb-10">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1><%= @hero.title %></h1>
-      <table class="table table-bordered">
-        <tbody>
-          <tr>
-            <th scope="row">Hero</th>
-            <% if @hero.photo.attached? %>
-            <td><%= cl_image_tag @hero.photo.key, height: 300, width: 400, crop: :fill %></td>
-            <% end %>
-          </tr>
-          <tr>
-            <th scope="row">Superpower</th>
-            <td><%= @hero.superpower %></td>
-          </tr>
-          <tr>
-            <th scope="row">Description</th>
-            <td><%= @hero.description %></td>
-          </tr>
-          <tr>
-            <th scope="row">City</th>
-            <td><%= @hero.city %></td>
-          </tr>
-          <tr>
-            <th scope="row">Price</th>
-            <td><%= @hero.price %></td>
-          </tr>
-          <tr>
-            <th scope="row">Availability</th>
-            <td><%= @hero.availability %></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="card-hero">
+  <div class="hero-img">
+  <% if @hero.photo.attached? %>
+    <%= cl_image_tag @hero.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
   </div>
-  <%= link_to "Back to Heroes", heros_path, class: "btn btn-primary"  %>
+  <div class="card-hero-infos">
+    <h2><%= @hero.title %></h2>
+    <p><%= @hero.description %></p>
+    <p><%= @hero.superpower %></p>
+    <p><%= @hero.city %></p>
+    <p><%= @hero.price %></p>
+  </div>
 </div>
