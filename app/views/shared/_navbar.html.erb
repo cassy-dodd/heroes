@@ -1,39 +1,43 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "/", class: "navbar-brand" do %>
   <!-- this should be changed to the heroes logo -->
-    <h2>HEROES</h2>
-    <% end %>
+    <h2 class="heroes-text">HEROES <i class="fas fa-mask"></i></h2>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Hi, #{current_user.first_name}", "#", class: "nav-link" %>
         </li>
         <!-- this could be choose your hero -->
-        <li class="nav-item active">
-          <%= link_to "choose your hero", "#", class: "nav-link" %>
-        </li>
-        <!-- this could be become a hero -->
-        <li class="nav-item">
-          <%= link_to "become a hero", "#", class: "nav-link" %>
-        </li>
+        <div class="options">
+          <li class="nav-item active left-item padding-right">
+            <%= link_to "choose your hero", "#", class: "nav-link" %>
+          </li>
+          <!-- this could be become a hero -->
+          <li class="nav-item padding-left">
+            <%= link_to "become a hero", "#", class: "nav-link text-color" %>
+          </li>
+        </div>
+
         <!-- this will be my profile dropdown with different options -->
         <li class="nav-item dropdown">
           <!-- this will be the current_user.photo.key once we connect cloudinary -->
           <%= image_tag "https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255626-stock-illustration-avatar-male-profile-gray-person.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
+        <li class="nav-item">
+          <%= link_to "About", "#", class: "nav-link" %>
+        </li>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
