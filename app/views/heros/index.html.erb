@@ -2,10 +2,12 @@
   <h1>All Heroes</h1>
   <ul class="list-group">
     <% @heros.each do |hero| %>
-      <li class="list-group-item">
-        <%= link_to hero.title, hero_path(hero)  %>
-        <%= link_to "X", hero_path(hero), method: :delete %>
-      </li>
+    <%  if hero.bookings.empty? %>
+        <li class="list-group-item">
+          <%= link_to hero.title, hero_path(hero)  %>
+<!--           <%= link_to "X", hero_path(hero), method: :delete %> -->
+        </li>
+      <% end %>
     <% end %>
   </ul>
 
