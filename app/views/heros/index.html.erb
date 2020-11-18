@@ -1,15 +1,24 @@
 <div class="container">
   <h1>All Heroes</h1>
-  <ul class="list-group">
+  <%= link_to "Add new hero", new_hero_path, class: "btn text-white bg-dark"  %>
+  <div class="cards row justify-content-center">
     <% @heros.each do |hero| %>
-    <%  if hero.bookings.empty? %>
-        <li class="list-group-item">
-          <%= link_to hero.title, hero_path(hero)  %>
-<!--           <%= link_to "X", hero_path(hero), method: :delete %> -->
-        </li>
-      <% end %>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3 card-hero">
+        <% if hero.photo.attached? %>
+          <%= cl_image_tag hero.photo.key, height: 300, width: 400, crop: :fill %></td>
+        <% end %>
+        <div class="card-hero-infos py-3 px-2">
+          <h1><%= link_to hero.title, hero_path(hero) %></h1>
+          <%  if hero.bookings.empty? %>
+            <li class="list-group-item">
+              <%= link_to hero.title, hero_path(hero)  %>
+            </li>
+          <% end %>
+          <p><%= hero.superpower %></p>
+          <button class="btn btn-book">BOOK US</button>
+        </div>
+      </div>
     <% end %>
-  </ul>
-
-  <%= link_to "Add new hero", new_hero_path, class: "btn btn-primary mt-3"  %>
+  </div>
 </div>
+
