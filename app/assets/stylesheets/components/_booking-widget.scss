@@ -1,0 +1,76 @@
+.booking-widget{
+  width: 355px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  padding: 24px;
+  background-color: white;
+
+  .price {
+    position: relative;
+    left: 10px;
+    font-size: 24px;
+  }
+  .date-picker {
+    border-radius: 8px 8px 0px 0px;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    padding: 12px;
+  }
+
+  .date {
+    label {
+    position: relative;
+    left: 4px;
+    }
+  }
+
+  .time-picker {
+    display: flex;
+    border-radius: 0px 0px 8px 8px;
+    padding: 12px;
+    border: 1px solid rgb(221, 221, 221);
+  }
+
+  .booking_start_time {
+    width: 144px;
+    // border-radius: 12px 0px 0px 12px;
+    padding: 4px 8px 4px 4px;
+    // border-top: 1px solid #dddddd;
+    // border-right: 1px solid #dddddd;
+    // border-left: 1px solid #dddddd;
+    // border-bottom: 1px solid #dddddd;
+  }
+
+  .booking_end_time {
+    width: 144px;
+    // border-radius: 0px 12px 12px 0px;
+    padding: 4px 4px 4px 8px;
+    // border-top: 1px solid #dddddd;
+    // border-right: 1px solid #dddddd;
+    // border-left: 0px solid #dddddd;
+    // border-bottom: 1px solid #dddddd;
+  }
+
+  select.time.optional {
+    padding: 0px;
+  }
+}
+
+.book-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #F70103;
+  color: white;
+}
+
+.booking-comment {
+  font-size: 12px;
+}
+
+.total-price {
+  border-top: 1px solid #dddddd;
+  padding-top: 12px;
+}
