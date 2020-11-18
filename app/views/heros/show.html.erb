@@ -1,3 +1,18 @@
+<div class="card-hero">
+  <div class="hero-img">
+  <% if @hero.photo.attached? %>
+    <%= cl_image_tag @hero.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+  </div>
+  <div class="card-hero-infos">
+    <h2><%= @hero.title %></h2>
+    <p><%= @hero.description %></p>
+    <p><%= @hero.superpower %></p>
+    <p><%= @hero.city %></p>
+    <p><%= @hero.price %></p>
+  </div>
+</div>
+
 <div class="container pt-4">
   <div class="row">
     <div class="container mb-10 col-8">
