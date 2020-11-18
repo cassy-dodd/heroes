@@ -13,3 +13,10 @@ Hero.create!(
   description: "Will fix any bug",
   city: "Berlin"
 )
+
+Hero.create!(
+  superpower: "BackEnd helper",
+  price: "20",
+  description: "Will fix any bug",
+  city: "Berlin"
+)
