@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "/", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
   <!-- this should be changed to the heroes logo -->
     <h2 class="heroes-text">HEROES <i class="fas fa-mask"></i></h2>
   <% end %>
@@ -18,11 +18,11 @@
         <!-- this could be choose your hero -->
         <div class="options">
           <li class="nav-item active left-item padding-right">
-            <%= link_to "choose your hero", "#", class: "nav-link" %>
+            <%= link_to "choose your hero", "/heros", class: "nav-link" %>
           </li>
           <!-- this could be become a hero -->
           <li class="nav-item padding-left">
-            <%= link_to "become a hero", "#", class: "nav-link text-color" %>
+            <%= link_to "become a hero", "/heros/new", class: "nav-link text-color" %>
           </li>
         </div>
 
