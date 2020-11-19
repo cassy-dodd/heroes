@@ -98,10 +98,10 @@ hero_5.photo.attach(io: File.open('app/assets/images/go-on-a-trip-with.jpg'), fi
 hero_5.save!
 
 hero_6 = Hero.new(
-  title: "Dont be alone on your next journey",
-  superpower: "campervan driver",
-  price: "50",
-  description: "I will drive your caravan and light your fire (only the outdoor one)",
+  title: "Look good for your next date",
+  superpower: "Sloppy eater",
+  price: "30",
+  description: "Next to me, any woman will seem beautiful",
   availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
   city: "Berlin",
   user: dorian,

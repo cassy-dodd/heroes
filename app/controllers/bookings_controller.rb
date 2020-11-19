@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.hero = @hero
     @booking.user = current_user
     if @booking.save
-      redirect_to heros_path, notice: "You booked : #{@hero.title} !"
+      redirect_to profile_path, notice: "You booked : #{@hero.title} !"
     else
       render 'heros/show'
     end

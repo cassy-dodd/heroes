@@ -51,14 +51,14 @@
   </div>
   <h1 class="text-center heros-title">Some of our heroes</h1>
   <div class="container heros-home-display">
-    <div class="cards row justify-content-center">
+    <div class="cards-home row justify-content-center">
       <% @heros.each do |hero| %>
         <%  if hero.bookings.empty? %>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3 card-hero">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3 card-hero-home">
             <% if hero.photo.attached? %>
               <%= cl_image_tag hero.photo.key, height: 300, width: 400, crop: :fill %>
             <% end %>
-            <div class="card-hero-infos py-3 px-2">
+            <div class="card-hero-infos-home py-3 px-2">
               <h1><%= link_to hero.title, hero_path(hero) %></h1>
               <p><%= hero.superpower %></p>
               <button class="btn btn-book">About us</button>

@@ -1,0 +1,21 @@
+<div class="profile-container">
+  <div class="user-booking-card list-group">
+    <img id="profile-pic" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" attr='profile picture'>
+    <h2>Hi <%= @user.first_name %></h2>
+    <p>here are your bookings:</p>
+      <div class="booking row">
+        <% @user_booking.each do |user_booking| %>
+
+          <div class="col-5 mb-3">
+          <li class="list-group-item"><h2>Booking</h2></li>
+          <li class="list-group-item"><strong>Hero: </strong><%= user_booking.hero.title %></li>
+          <li class="list-group-item"><strong>Power: </strong><%= user_booking.hero.superpower %></li>
+          <li class="list-group-item"><strong>Date: </strong><%= user_booking.date %></li>
+          <li class="list-group-item"><strong>Start-time: </strong><%= user_booking.start_time %></li>
+          <li class="list-group-item"><strong>End-time: </strong><%= user_booking.end_time %></li>
+
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>
