@@ -2,6 +2,14 @@ class HerosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @heros = Hero.all
+     @markers = @heros.map do |hero|
+      {
+        lat: hero.latitude,
+        lng: hero.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { hero: hero }),
+        image_url: helpers.asset_url('final marker.png')
+      }
+      end
   end
 
   def show
@@ -17,7 +25,7 @@ class HerosController < ApplicationController
     @hero = Hero.new(hero_params)
     @hero.user = current_user
     if @hero.save
-      redirect_to hero_path(@hero)
+      redirect_to hero_path(@hero), notice: "You are a hero now !"
     else
       render :new
     end

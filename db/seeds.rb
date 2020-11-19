@@ -10,11 +10,31 @@ Booking.destroy_all
 Hero.destroy_all
 User.destroy_all
 
+adham = User.create!(
+  first_name: "Adham",
+  last_name: "Jaafar",
+  email: "adham@gmail.com",
+  password: "adham123"
+  )
+cassy = User.create!(
+  first_name: "Cassy",
+  last_name: "Dodd",
+  email: "cassy@gmail.com",
+  password: "cassy123"
+  )
 dorian = User.create!(
   first_name: "Dorian",
   last_name: "Wilson",
   email: "dw.debriano@gmail.com",
   password: "dorian123"
+  )
+
+
+edoardo = User.create!(
+  first_name: "Edoardo",
+  last_name: "Maraia",
+  email: "edoardo@gmail.com",
+  password: "edo123"
   )
 
 hero_1 = Hero.new(
@@ -35,7 +55,7 @@ hero_2 = Hero.new(
   price: "50",
   description: "Ill take care of your girlfriend while you play have fun with your bros",
   availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
-  city: "Berlin",
+  city: "France",
   user: dorian,
 )
 hero_2.photo.attach(io: File.open('app/assets/images/be-friends-with-gf.jpg'), filename: 'be-friends-with-gf.jpg')
@@ -59,7 +79,7 @@ hero_4 = Hero.new(
   price: "800",
   description: "Finally buy your daughter a pony!",
   availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
-  city: "Berlin",
+  city: "England",
   user: dorian,
 )
 hero_4.photo.attach(io: File.open('app/assets/images/give-your-daughter-a-pony.jpg'), filename: 'give-your-daughter-a-pony.jpg')
