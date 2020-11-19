@@ -1,23 +1,32 @@
-<div class="banner image-fit">
-  <div class="font-container">
-    <h2 class="tag-line">Find your hero today...</h2>
+<div class="main-container">
+  <div class="banner image-fit">
+    <div class="font-container">
+      <h2 class="tag-line">Find your hero today...</h2>
+    </div>
   </div>
-</div>
-<!--
-<div class="card-container">
-  <div class="card">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium explicabo assumenda unde, nulla hic ipsam neque vero ab, labore ipsum! Sunt eveniet accusamus, accusantium cum praesentium, vero fuga laborum maiores non amet dignissimos odio, doloribus error itaque. Minima sequi, earum?
-    </p>
+
+  <div class="cards-container">
+    <div class="homepage-cards">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus unde necessitatibus ullam mollitia, voluptatem iusto incidunt quisquam dolor, nisi quidem, vel eveniet dicta cumque fuga error quo, iste omnis alias deleniti tenetur similique culpa corrupti accusantium neque odio. Delectus laudantium ullam unde corrupti facere nam voluptatibus autem, quos adipisci in consectetur aperiam error quas repudiandae obcaecati eaque illo soluta temporibus facilis, dolores nihil similique blanditiis consequuntur dolorem! Cumque omnis eveniet, nulla, ullam debitis commodi doloribus eum dicta repellendus recusandae illum illo ducimus deserunt molestiae voluptatibus rem quibusdam. Incidunt repellat soluta nemo nobis deleniti commodi quam quae tenetur atque voluptatem! Commodi nostrum suscipit, natus iste rem sapiente illum necessitatibus consequatur esse.</p>
+     </div>
   </div>
-  <div class="card">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium explicabo assumenda unde, nulla hic ipsam neque vero ab, labore ipsum! Sunt eveniet accusamus, accusantium cum praesentium, vero fuga laborum maiores non amet dignissimos odio, doloribus error itaque. Minima sequi, earum?
-    </p>
-  </div>
-  <div class="card">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium explicabo assumenda unde, nulla hic ipsam neque vero ab, labore ipsum! Sunt eveniet accusamus, accusantium cum praesentium, vero fuga laborum maiores non amet dignissimos odio, doloribus error itaque. Minima sequi, earum?
-    </p>
+
+  <div class="container heros-display">
+    <div class="cards row justify-content-center">
+      <% @heros.each do |hero| %>
+        <%  if hero.bookings.empty? %>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3 card-hero">
+            <% if hero.photo.attached? %>
+              <td><%= cl_image_tag hero.photo.key, height: 300, width: 400, crop: :fill %></td>
+            <% end %>
+            <div class="card-hero-infos py-3 px-2">
+              <h1><%= link_to hero.title, hero_path(hero) %></h1>
+              <p><%= hero.superpower %></p>
+              <button class="btn btn-book">BOOK US</button>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

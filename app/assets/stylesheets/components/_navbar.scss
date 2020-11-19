@@ -1,14 +1,15 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  // border: 2px black solid;
-  box-shadow: 3px 3px 3px $medium-gray;
+  border: 3px black solid;
+  // box-shadow: 3px 3px 3px $medium-gray;
 
  }
 
  .navbar {
   position: fixed;
   width: 100%;
+  z-index: 1;
 
 }
 
