@@ -12,4 +12,7 @@ class Hero < ApplicationRecord
   validates :description, presence: true
   validates :availability, presence: true
   validates :price, presence: true
+
+  geocoded_by :city
+  after_validation :geocode, if: :will_save_change_to_city?
 end
