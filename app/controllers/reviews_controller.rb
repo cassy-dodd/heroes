@@ -1,12 +1,18 @@
 class ReviewsController < ApplicationController
-  def create
+
+  def new
     @hero = Hero.find(params[:hero_id])
+    @review = Review.new
+  end
+
+  def create
     @review = Review.new(review_params)
+    @hero = Hero.find(params[:hero_id])
     @review.hero = @hero
-    if @hero.save
+    if @review.save
       redirect_to hero_path(@hero)
     else
-      render hero_path(@hero)
+      render :new
     end
   end
 

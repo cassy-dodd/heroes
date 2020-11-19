@@ -1,6 +1,6 @@
 class HerosController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @heros = Hero.all

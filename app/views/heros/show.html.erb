@@ -43,23 +43,12 @@
     <%= render 'bookings/booking' %>
     </div>
 
-    <div class="list-group">
-        <% @hero.reviews.each do |review| %>
-          <li class="list-group-item">
-            <small>
-              <% count = 0 %>
-              <% 5.times do %>
-                <% if review.rating > count %>
-                  <i class="fas fa-star"></i>
-                <% else %>
-                  <i class="far fa-star"></i>
-                <% end %>
-                <% count += 1 %>
-              <% end %>
-            </small>
-            <p><%= review.content %></p>
-          </li>
-        <% end %>
+    <ul class="list-group">
+      <% @hero.reviews.each do |review| %>
+        <li class="list-group-item"><%= review.content %></li>
+        <li> <%= review.rating %> </li>
+      <% end %>
+    </ul>
     </div>
   </div>
 </div>

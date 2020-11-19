@@ -13,17 +13,9 @@
           <li class="list-group-item"><strong>Date: </strong><%= user_booking.date %></li>
           <li class="list-group-item"><strong>Start-time: </strong><%= user_booking.start_time %></li>
           <li class="list-group-item"><strong>End-time: </strong><%= user_booking.end_time %></li>
-
+          <%= link_to 'Leave a review', new_hero_review_path(user_booking[:hero_id]), class: "btn btn-book"%>
           </div>
         <% end %>
-
-        <div>
-          <%= simple_form_for [@hero, @review] do |f| %>
-            <%= f.input :rating, collection: 0..5 %>
-            <%= f.input :content%>
-            <%= f.submit class: 'btn btn-primary' %>
-          <% end %>
-        </div>
       </div>
   </div>
 </div>
