@@ -1,0 +1,31 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  .user-booking-card {
+    display: flex;
+    align-self: center;
+  h2 {
+    text-decoration: none !important;
+    align-self: center;
+  }
+  p {
+    align-self: center;
+  }
+  }
+}
+
+.booking {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+#profile-pic {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  align-self: center;
+}
