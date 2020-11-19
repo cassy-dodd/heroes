@@ -4,18 +4,21 @@
 
 .mid-section{
   display:flex;
-  padding-bottom:-10px;
   margin:0;
 }
 
 .cards {
   padding-top: 40px;
-  width: 1900px;
   margin-left:0;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding-right:8px;
+  padding-left: 16px;
 }
 .row{
   margin-right:0;
-  padding-bottom:5px;
+  padding-bottom:8px;
 }
 
 img {
