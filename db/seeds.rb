@@ -55,7 +55,7 @@ hero_2 = Hero.new(
   price: "50",
   description: "Ill take care of your girlfriend while you play have fun with your bros",
   availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
-  city: "Berlin",
+  city: "France",
   user: dorian,
 )
 hero_2.photo.attach(io: File.open('app/assets/images/be-friends-with-gf.jpg'), filename: 'be-friends-with-gf.jpg')
@@ -79,7 +79,7 @@ hero_4 = Hero.new(
   price: "800",
   description: "Finally buy your daughter a pony!",
   availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
-  city: "Berlin",
+  city: "England",
   user: dorian,
 )
 hero_4.photo.attach(io: File.open('app/assets/images/give-your-daughter-a-pony.jpg'), filename: 'give-your-daughter-a-pony.jpg')
