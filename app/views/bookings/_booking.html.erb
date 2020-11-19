@@ -5,11 +5,11 @@
       <%= f.input :date, class: "date-label" %>
     </div>
     <div class="time-picker">
-      <%= f.input :start_time, class: "start-time-picker" %>
+      <%= f.input :start_time, class: "start-time-picker"%>
       <%= f.input :end_time, class: "start-time-picker" %>
     </div>
     <div class="form-actions mb-2 rounded">
-      <%= f.submit "book", class: "book-button btn" %>
+      <%= f.submit "book", class: "book-button btn", id: "book"%>
     </div>
   <% end %>
   <div class="text-center booking-comment">
