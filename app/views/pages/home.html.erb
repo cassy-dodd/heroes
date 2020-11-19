@@ -1,32 +1,76 @@
 <div class="main-container">
   <div class="banner image-fit">
     <div class="font-container">
-      <h2 class="tag-line">Find your hero today...</h2>
+      <h2 class="tag-line">A hero for every moment</h2>
     </div>
   </div>
 
   <div class="cards-container">
     <div class="homepage-cards">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus unde necessitatibus ullam mollitia, voluptatem iusto incidunt quisquam dolor, nisi quidem, vel eveniet dicta cumque fuga error quo, iste omnis alias deleniti tenetur similique culpa corrupti accusantium neque odio. Delectus laudantium ullam unde corrupti facere nam voluptatibus autem, quos adipisci in consectetur aperiam error quas repudiandae obcaecati eaque illo soluta temporibus facilis, dolores nihil similique blanditiis consequuntur dolorem! Cumque omnis eveniet, nulla, ullam debitis commodi doloribus eum dicta repellendus recusandae illum illo ducimus deserunt molestiae voluptatibus rem quibusdam. Incidunt repellat soluta nemo nobis deleniti commodi quam quae tenetur atque voluptatem! Commodi nostrum suscipit, natus iste rem sapiente illum necessitatibus consequatur esse.</p>
+      <h1>Find your hero</h1>
+      <p>Improve every situation with a hero by your side</p>
+      <%= link_to heros_path do  %>
+       <button class="btn button-book">Get started</button>
+      <% end %>
      </div>
   </div>
-
-  <div class="container heros-display">
+<!--     <h2 class="text-center">A hero by your side makes every moment better</h2> -->
+  <div class="full-home-feelings-banner"></div>
+  <div class="container how-to-become-a-hero">
+    <h1 class="text-center pb-5">How to become a hero</h1>
+    <div class="row">
+      <div class="d-flex">
+        <div class="col-4 text-center mr-4">
+          <div>
+            <img src="https://res.cloudinary.com/dtulzuk5j/image/upload/v1605794927/pexels-andrea-piacquadio-874242_rngiyu.jpg" class="how-to-image">
+          </div>
+          <h3>Define your power</h3>
+          <p>All heroes start with a power. Think about how your power will come in handy. When you have an idea, <%= link_to "start the submission process", new_hero_path %></p>
+        </div>
+        <div class="col-4 text-center">
+          <div>
+            <img src="https://res.cloudinary.com/dtulzuk5j/image/upload/v1605794924/Screenshot_2020-11-19_at_14.41.13_wa3ril.png" class="how-to-image">
+          </div>
+          <h3>Share your services</h3>
+          <p>Next, you'll need to describe the service you will provide with your superpower. Find the right title, share the value of what you’re offering in detail, give it a fair price and set your availability for when it makes sense.</p>
+        </div>
+        <div class="col-4 text-center ml-4">
+          <div>
+            <img src="https://res.cloudinary.com/dtulzuk5j/image/upload/v1605794920/Screenshot_2020-11-19_at_14.47.56_nkieju.png" class="how-to-image">
+          </div>
+          <h3>Submit your hero</h3>
+          <p>You're almost there! Make sure to put in all the right information and click on Create Hero. Go on the main page and see that your hero has been added.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center pt-5">
+      <%= link_to new_hero_path do  %>
+      <button class="btn button-discover-red">Become a hero</button>
+    <% end %>
+    </div>
+  </div>
+  <h1 class="text-center heros-title">Some of our heroes</h1>
+  <div class="container heros-home-display">
     <div class="cards row justify-content-center">
       <% @heros.each do |hero| %>
         <%  if hero.bookings.empty? %>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3 card-hero">
             <% if hero.photo.attached? %>
-              <td><%= cl_image_tag hero.photo.key, height: 300, width: 400, crop: :fill %></td>
+              <%= cl_image_tag hero.photo.key, height: 300, width: 400, crop: :fill %>
             <% end %>
             <div class="card-hero-infos py-3 px-2">
               <h1><%= link_to hero.title, hero_path(hero) %></h1>
               <p><%= hero.superpower %></p>
-              <button class="btn btn-book">BOOK US</button>
+              <button class="btn btn-book">About us</button>
             </div>
           </div>
         <% end %>
       <% end %>
     </div>
+  </div>
+  <div class="text-center pt-5">
+    <%= link_to heros_path do  %>
+     <button class="btn button-discover-red">See all heroes</button>
+    <% end %>
   </div>
 </div>

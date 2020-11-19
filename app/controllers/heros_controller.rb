@@ -25,7 +25,7 @@ class HerosController < ApplicationController
     @hero = Hero.new(hero_params)
     @hero.user = current_user
     if @hero.save
-      redirect_to hero_path(@hero)
+      redirect_to hero_path(@hero), notice: "You are a hero now !"
     else
       render :new
     end
