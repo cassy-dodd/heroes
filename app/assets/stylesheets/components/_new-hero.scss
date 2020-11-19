@@ -5,9 +5,14 @@
 
 .new-hero-page {
   background-color: white;
-  background-image: url("background-new.png");
+  background-image: url("background-side.png");
 }
 
 .new-hero-submit-button {
   color: white;
+  width: 100%;
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
 }
