@@ -1,17 +1,19 @@
-<div class="container new-hero-form">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h1>Create a new Hero</h1>
-      <%= simple_form_for @hero do |f| %>
-        <%= f.input :title %>
-        <%= f.input :superpower %>
-        <%= f.input :price %>
-        <%= f.input :description %>
-        <%= f.input :city %>
-        <%= f.input :availability %>
-        <%= f.input :photo, as: :file %>
-        <%= f.button :submit, class: 'btn btn-primary', notice: "You are now a Hero!" %>
-      <% end %>
+<div class="new-hero-page">
+  <div class="container new-hero-form">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1>Create a new Hero</h1>
+        <%= simple_form_for @hero do |f| %>
+          <%= f.input :title %>
+          <%= f.input :superpower %>
+          <%= f.input :price %>
+          <%= f.input :description %>
+          <%= f.input :city %>
+          <%= f.input :availability %>
+          <%= f.input :photo, as: :file %>
+          <%= f.button :submit, class: 'btn new-hero-submit-button', notice: "You are now a Hero!" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
