@@ -1,5 +1,5 @@
 .main-container {
-  background-color: $medium-gray;
+  background-color: white;
   padding-bottom: 150px;
 }
 
@@ -7,25 +7,38 @@
   display: flex;
   justify-content: center;
   padding-top: 600px;
-  padding-bottom: 370px;
-  height: 400px;
+  padding-bottom: 250px;
+  height: 300px;
   width: 100%;
-  align-self: center;
 }
 
 .homepage-cards {
-  display: flex;
-  justify-content: space-around;
-  border: 6px black solid;
+  text-align: center;
   height: 400px;
-  width: 85%;
-  margin: 40px;
-  border-radius: 5px;
-  background-color: white;
-  overflow: hidden;
-  p {
-    padding: 50px;
-    display: flex;
-    align-self: center;
+  h1 {
+    font-size: 64px;
+    font-weight: bolder;
+    padding-bottom: 30px;
+    font-family: $hero-font;
   }
+  p {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+  button {
+    color: white;
+    background-color: #F70103;
+    height: 40px;
+    width: 120px;
+    // &:hover {
+    //   font-style:
+    // }
+  }
+}
+
+.button-discover-red {
+  color:white;
+  background-color: #F70103;
+  text-align: center;
+  padding-top: 10px;
 }
