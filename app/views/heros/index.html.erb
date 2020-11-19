@@ -1,28 +1,32 @@
 <div class="container heros-display">
-  <h1>Select a Hero</h1>
-  <%= link_to "Add new hero", new_hero_path, class: "btn text-white bg-dark"  %>
-  <div class="cards row justify-content-center">
-    <% @heros.each do |hero| %>
-      <%  if hero.bookings.empty? %>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3 card-hero">
-          <% if hero.photo.attached? %>
-            <td><%= cl_image_tag hero.photo.key, height: 300, width: 400, crop: :fill %></td>
-          <% end %>
-          <div class="card-hero-infos py-3 px-2">
-            <h1><%= link_to hero.title, hero_path(hero) %></h1>
-            <p><%= hero.superpower %></p>
-            <button class="btn btn-book">BOOK US</button>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+  <div class= "top-row">
+    <h1 class= "new_style">Select a Hero</h1>
+    <%= link_to "Add new hero", new_hero_path, class: "btn text-white bg-dark position"  %>
   </div>
-  <div
-  id="map"
-  style="width: 40%;
-  height: 100vh;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  >
-</div>
+  <div class= "mid-section">
+    <div class="cards row justify-content-center">
+      <% @heros.each do |hero| %>
+      <%  if hero.bookings.empty? %>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3 card-hero">
+        <% if hero.photo.attached? %>
+        <td><%= cl_image_tag hero.photo.key, height: 300, width: 400, crop: :fill %></td>
+        <% end %>
+        <div class="card-hero-infos py-3 px-2">
+          <h1><%= link_to hero.title, hero_path(hero) %></h1>
+          <p><%= hero.superpower %></p>
+          <button class="btn btn-book">BOOK US</button>
+        </div>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+    <div
+    id="map"
+    style="width: 70%;
+    height: 100vh;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    >
+    </div>
+  </div>
 </div>

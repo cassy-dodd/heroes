@@ -7,7 +7,7 @@ class HerosController < ApplicationController
         lat: hero.latitude,
         lng: hero.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { hero: hero }),
-        image_url: helpers.asset_url('bolt.png')
+        image_url: helpers.asset_url('final marker.png')
       }
       end
   end
