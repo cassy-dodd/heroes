@@ -19,6 +19,7 @@
     font-size: 64px;
     font-weight: bolder;
     padding-bottom: 30px;
+    font-family: $hero-font;
   }
   p {
     font-size: 30px;
@@ -29,5 +30,15 @@
     background-color: #F70103;
     height: 40px;
     width: 120px;
+    // &:hover {
+    //   font-style:
+    // }
   }
+}
+
+.button-discover-red {
+  color:white;
+  background-color: #F70103;
+  text-align: center;
+  padding-top: 10px;
 }

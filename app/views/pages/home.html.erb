@@ -16,31 +16,41 @@
   </div>
 <!--     <h2 class="text-center">A hero by your side makes every moment better</h2> -->
   <div class="full-home-feelings-banner"></div>
-  <div class="container how-it-works">
-    <h1>How it works</h1>
+  <div class="container how-to-become-a-hero">
+    <h1 class="text-center pb-5">How to become a hero</h1>
     <div class="row">
-      <div class="col-4">
-        <div>
-          <img src="" alt="" style="asset_url()">
+      <div class="d-flex">
+        <div class="col-4 text-center mr-4">
+          <div>
+            <img src="https://res.cloudinary.com/dtulzuk5j/image/upload/v1605794927/pexels-andrea-piacquadio-874242_rngiyu.jpg" class="how-to-image">
+          </div>
           <h3>Define your power</h3>
           <p>All heroes start with a power. Think about how your power will come in handy. When you have an idea, <%= link_to "start the submission process", new_hero_path %></p>
         </div>
-        <div>
-          <img src="" alt="">
-          <h3></h3>
-          <p></p>
+        <div class="col-4 text-center">
+          <div>
+            <img src="https://res.cloudinary.com/dtulzuk5j/image/upload/v1605794924/Screenshot_2020-11-19_at_14.41.13_wa3ril.png" class="how-to-image">
+          </div>
+          <h3>Share your services</h3>
+          <p>Next, you'll need to describe the service you will provide with your superpower. Find the right title, share the value of what you’re offering in detail, give it a fair price and set your availability for when it makes sense.</p>
         </div>
-        <div>
-          <img src="" alt="">
-          <h3></h3>
-          <p></p>
+        <div class="col-4 text-center ml-4">
+          <div>
+            <img src="https://res.cloudinary.com/dtulzuk5j/image/upload/v1605794920/Screenshot_2020-11-19_at_14.47.56_nkieju.png" class="how-to-image">
+          </div>
+          <h3>Submit your hero</h3>
+          <p>You're almost there! Make sure to put in all the right information and click on Create Hero. Go on the main page and see that your hero has been added.</p>
         </div>
       </div>
     </div>
-
+    <div class="text-center pt-5">
+      <%= link_to new_hero_path do  %>
+      <button class="btn button-discover-red">Become a hero</button>
+    <% end %>
+    </div>
   </div>
-
   <div class="container heros-display">
+  <h1 class="text-center heros-title">Our heros</h1>
     <div class="cards row justify-content-center">
       <% @heros.each do |hero| %>
         <%  if hero.bookings.empty? %>
@@ -57,5 +67,10 @@
         <% end %>
       <% end %>
     </div>
+  </div>
+  <div class="text-center pt-5">
+    <%= link_to heros_path do  %>
+     <button class="btn button-discover-red">See all heroes</button>
+    <% end %>
   </div>
 </div>
