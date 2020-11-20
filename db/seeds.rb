@@ -39,7 +39,7 @@ edoardo = User.create!(
 
 hero_1 = Hero.new(
   title: "Annoy your neighbor",
-  superpower: "no shame",
+  superpower: "Shameless",
   price: "20",
   description: "Call me and ill come freak your neighbours out for you",
   availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
@@ -49,17 +49,34 @@ hero_1 = Hero.new(
 hero_1.photo.attach(io: File.open('app/assets/images/annoy-your-neighbor.jpg'), filename: 'annoy-your-neighbor.jpg')
 hero_1.save!
 
+# review_1 = Review.new(
+#   rating: 4,
+#   content: "My neighbour was scared as hell! Will book again!",
+#   hero_id: Hero.first[:id],
+#   user_id: User.first[:id],
+# )
+# review_1.save!
+
+
 hero_2 = Hero.new(
-  title: "Go with your bros",
+  title: "Boys night out",
   superpower: "Be friends with your girlfriend",
   price: "50",
-  description: "Ill take care of your girlfriend while you play have fun with your bros",
+  description: "Ill take care of your girlfriend while you play and have fun with your bros",
   availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
   city: "France",
   user: dorian,
 )
 hero_2.photo.attach(io: File.open('app/assets/images/be-friends-with-gf.jpg'), filename: 'be-friends-with-gf.jpg')
 hero_2.save!
+
+# review_2 = Review.new(
+#   rating: 4,
+#   content: "My neighbour was scared as hell! Will book again!",
+#   hero_id: Hero.first[:id],
+#   user_id: User.first[:id],
+# )
+# review_1.save!
 
 hero_3 = Hero.new(
   title: "no reminder at 8pm",
@@ -109,3 +126,4 @@ hero_6 = Hero.new(
 )
 hero_6.photo.attach(io: File.open('app/assets/images/look-good.jpg'), filename: 'look-good.jpg')
 hero_6.save!
+
