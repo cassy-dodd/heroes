@@ -13,3 +13,13 @@ img {
   font-size:16;
 }
 
+.reviews-container {
+  display: flex;
+  border-top-color: rgb(221, 221, 221);
+  padding-top: 47px;
+  justify-content: flex-end;
+}
+
+body {
+  background-color: white;
+}

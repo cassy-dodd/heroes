@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
+  has_one_attached :photo
   belongs_to :hero
   belongs_to :user
   validates :content, presence: true

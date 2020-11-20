@@ -25,22 +25,32 @@
     font-size: 30px;
     padding-bottom: 30px;
   }
-  button {
-    color: white;
-    background-color: #F70103;
-    height: 40px;
-    width: 120px;
-    // &:hover {
-    //   font-style:
-    // }
-  }
+  // button {
+  //   color: white;
+  //   background-color: #F70103;
+  //   height: 40px;
+  //   width: 120px;
+  //   // &:hover {
+  //   //   font-style:
+  //   // }
+  // }
 }
 
 .button-discover-red {
-  color:white;
-  background-color: #F70103;
-  text-align: center;
-  padding-top: 10px;
+    width: 165px;
+    height: 48px;
+    border-radius: 25px;
+    // border: solid 1px #F70103;
+    // color: #F70103;
+    // background-color: white;
+    color:white;
+    background-color: #F70103;
+  // text-align: center;
+  // padding-top: 10px;
+  &:hover {
+    color: white;
+    box-shadow: -4px 4px black;
+  }
 }
 
 .heros-title {
