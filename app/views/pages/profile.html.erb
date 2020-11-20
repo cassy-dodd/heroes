@@ -1,10 +1,13 @@
 <div class="profile-container">
   <div class="user-booking-card list-group">
     <div class="profile-banner">
-      <img id="profile-pic" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" attr='profile picture'>
+      <img id="profile-pic" src="https://res.cloudinary.com/dtulzuk5j/image/upload/v1605874354/Dorian-profile-pic-square_q5lm5n.jpg" attr='profile picture'>
       <h2 id="user-greeting">Hi <%= @user.first_name %></h2>
     </div>
-    <p>Here are your bookings:</p>
+    <div class="booking-container my-5">
+      <div class="center-booking-message pt-4">
+        <h3><strong>Your bookings:</strong></h3>
+      </div>
       <div class="booking row">
         <% @user_booking.each do |user_booking| %>
 
@@ -17,9 +20,15 @@
             <li class="list-group-item"><strong>Start-time: </strong><%= user_booking.start_time %></li>
             <li class="list-group-item"><strong>End-time: </strong><%= user_booking.end_time %></li>
 
+            <!--  <a href="#" class="list-group-item list-group-item-action active">
+              Cras justo odio
+            </a> -->
+
+
           </div>
         <% end %>
       </div>
+    </div>
   </div>
 </div>
 
