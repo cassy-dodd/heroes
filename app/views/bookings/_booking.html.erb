@@ -2,7 +2,7 @@
   <p class="price"> <strong> <%= @hero.price %> € </strong></p>
   <%= simple_form_for([@hero, @booking]) do |f| %>
     <div class="date-picker">
-      <%= f.input :date, class: "date-label" %>
+      <%= f.input :date, input_html: {class: "datepicker"} %>
     </div>
     <div class="time-picker">
       <%= f.input :start_time, class: "start-time-picker"%>
