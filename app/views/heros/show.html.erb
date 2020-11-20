@@ -42,19 +42,22 @@
     <div class="booking-section col-4">
     <%= render 'bookings/booking' %>
     </div>
-    <ul>
-      <% @hero.reviews.each do |review| %>
-        <li>
-          <div class="notification">
-            <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-            <div class="notification-content">
-              <p><small>14th January</small></p>
-              <p><%= review.content %></p>
-              <p><%= review.rating %></p>
+    <div class="reviews" style="border-top-color: rgb(221, 221, 221);">
+      <ul>
+        <h2>reviews (<%=@hero.reviews.count%>)</h2>
+        <% @hero.reviews.each do |review| %>
+          <li>
+            <div class="notification">
+              <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+              <div class="notification-content">
+                <p><small>14th January</small></p>
+                <p><%= review.content %></p>
+                <p><%= review.rating %></p>
+              </div>
             </div>
-          </div>
-        </li>
-      <% end %>
-    </ul>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
