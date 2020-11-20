@@ -50,7 +50,7 @@
             <div class="notification">
               <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
               <div class="notification-content">
-                <p><small>14th January</small></p>
+                <p><small><%= Date.today.to_s(:long)%></small></p>
                 <p><%= review.content %></p>
                 <p><%= review.rating %></p>
               </div>
