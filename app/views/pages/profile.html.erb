@@ -20,8 +20,10 @@
             <li class="list-group-item"><strong>Start-time: </strong><%= user_booking.start_time %></li>
             <li class="list-group-item"><strong>End-time: </strong><%= user_booking.end_time %></li>
 
-            <!--  <a href="#" class="list-group-item list-group-item-action active">
-              Cras justo odio
+            <li class="list-group-item text-center header text-white" id="booked-hero-button"><%= link_to "Your hero", hero_path(user_booking.hero)%></li>
+
+            <!--  <a href="/hero" class="list-group-item list-group-item-action active">
+              Your hero
             </a> -->
           </div>
         <% end %>

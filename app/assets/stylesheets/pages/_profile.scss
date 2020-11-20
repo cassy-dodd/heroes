@@ -53,23 +53,6 @@
   font-size: 24px;
 }
 
-#profile-pic {
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  align-self: center;
-  box-shadow: rgba(0, 0, 0, 0.30) 0px 6px 16px;
-  margin-bottom: 10px;
-}
-
-
-#user-greeting {
-  font-family: $hero-font;
-  padding-left: 20px;
-}
-
-
 .rounded-corner {
   border-radius: 10px;
 }
@@ -81,3 +64,26 @@
   }
 }
 
+#user-greeting {
+  font-family: $hero-font;
+  padding-left: 30px;
+}
+
+#profile-pic {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.30) 0px 6px 16px;
+  margin-bottom: 10px;
+}
+
+#booked-hero-button {
+  a {
+    font-size: 20px;
+    color: white !important;
+    text-decoration: none !important;
+    background-color: transparent;
+  }
+}
