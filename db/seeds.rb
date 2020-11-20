@@ -105,6 +105,7 @@ hero_6 = Hero.new(
   availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
   city: "Berlin",
   user: dorian,
+
 )
 hero_6.photo.attach(io: File.open('app/assets/images/look-good.jpg'), filename: 'look-good.jpg')
 hero_6.save!

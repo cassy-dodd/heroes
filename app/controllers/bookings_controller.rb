@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @review = Review.new
     @hero = Hero.find(params[:hero_id])
     @booking = Booking.new(bookings_params)
     @booking.hero = @hero
