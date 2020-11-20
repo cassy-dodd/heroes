@@ -1,11 +1,13 @@
-<div class="container heros-display">
+<!-- <div class="container heros-display">
   <div class= "top-row">
     <h1 class= "new_style">Select a Hero</h1>
     <%= link_to "Add new hero", new_hero_path, class: "btn text-white bg-dark position"  %>
   </div>
-</div>
+</div> -->
+<div class="bg-white">
+  <p id="tagline"><strong>Everyone deserves a hero in their life. Pick yours.</strong></p>
   <div class= "mid-section">
-    <div class="cards row justify-content-center">
+    <div class="cards row justify-content-center mb-5">
       <% @heros.each do |hero| %>
       <%  if hero.bookings.empty? %>
       <div class="card-hero">
@@ -23,11 +25,11 @@
     </div>
     <div
     id="map"
-    style="width: 60%;
+    style="width: 40%;
     height: 100vh;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     >
     </div>
   </div>
-
+</div>
