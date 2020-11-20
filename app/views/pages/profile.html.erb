@@ -1,20 +1,30 @@
 <div class="profile-container">
   <div class="user-booking-card list-group">
-    <img id="profile-pic" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" attr='profile picture'>
-    <h2>Hi <%= @user.first_name %></h2>
-    <p>here are your bookings:</p>
+    <div class="profile-banner">
+      <img id="profile-pic" src="https://res.cloudinary.com/dtulzuk5j/image/upload/v1605874354/Dorian-profile-pic-square_q5lm5n.jpg" attr='profile picture'>
+      <h2 id="user-greeting">Hi <%= @user.first_name %></h2>
+    </div>
+    <div class="booking-container my-5">
+      <div class="center-booking-message pt-4">
+        <h3><strong>Your bookings:</strong></h3>
+      </div>
       <div class="booking row">
         <% @user_booking.each do |user_booking| %>
-          <div class="col-5 mb-3">
-          <li class="list-group-item"><h2>Booking</h2></li>
-          <li class="list-group-item"><strong>Hero: </strong><%= user_booking.hero.title %></li>
-          <li class="list-group-item"><strong>Power: </strong><%= user_booking.hero.superpower %></li>
-          <li class="list-group-item"><strong>Start Date: </strong><%= user_booking.start_date %></li>
-          <li class="list-group-item"><strong>End Date: </strong><%= user_booking.end_date %></li>
-          <li class="list-group-item"><strong>Start-time: </strong><%= user_booking.start_time %></li>
-          <li class="list-group-item"><strong>End-time: </strong><%= user_booking.end_time %></li>
+          <div class="col-5 mb-5 rounded-corner">
+            <li class="list-group-item text-center pt-3 header"><h2 id="white-text"><strong>Booking</strong></h2></li>
+            <li class="list-group-item"><strong>Hero: </strong><%= user_booking.hero.title %></li>
+            <li class="list-group-item"><strong>Power: </strong><%= user_booking.hero.superpower %></li>
+            <li class="list-group-item"><strong>Date: </strong><%= user_booking.date %></li>
+            <li class="list-group-item"><strong>Start-time: </strong><%= user_booking.start_time %></li>
+            <li class="list-group-item"><strong>End-time: </strong><%= user_booking.end_time %></li>
+            <li class="list-group-item text-center header text-white" id="booked-hero-button"><%= link_to "See hero profile", hero_path(user_booking.hero)%></li>
+            <!--  <a href="/hero" class="list-group-item list-group-item-action active">
+              Your hero
+            </a> -->
           </div>
         <% end %>
       </div>
+    </div>
   </div>
 </div>
+
