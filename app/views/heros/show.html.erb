@@ -42,13 +42,19 @@
     <div class="booking-section col-4">
     <%= render 'bookings/booking' %>
     </div>
-
-    <ul class="list-group">
+    <ul>
       <% @hero.reviews.each do |review| %>
-        <li class="list-group-item"><%= review.content %></li>
-        <li> <%= review.rating %> </li>
+        <li>
+          <div class="notification">
+            <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+            <div class="notification-content">
+              <p><small>14th January</small></p>
+              <p><%= review.content %></p>
+              <p><%= review.rating %></p>
+            </div>
+          </div>
+        </li>
       <% end %>
     </ul>
-    </div>
   </div>
 </div>

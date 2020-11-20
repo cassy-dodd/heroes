@@ -13,7 +13,7 @@
           <li class="list-group-item"><strong>Date: </strong><%= user_booking.date %></li>
           <li class="list-group-item"><strong>Start-time: </strong><%= user_booking.start_time %></li>
           <li class="list-group-item"><strong>End-time: </strong><%= user_booking.end_time %></li>
-          <%= link_to 'Leave a review', new_hero_review_path(user_booking[:hero_id]), class: "btn btn-book"%>
+          <%= link_to 'Leave a review', new_hero_review_path(user_booking[:hero_id]), class: "btn btn new-hero-submit-button mt-2"%>
           </div>
         <% end %>
       </div>
