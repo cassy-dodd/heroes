@@ -46,15 +46,13 @@
 
 #user-greeting {
   font-family: $hero-font;
-  transition-timing-function: ease-in;
-  display: flex;
-  justify-content: center;
+  padding-left: 20px;
 }
 
 .profile-banner {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  padding-left: 20px;
+  justify-content: flex-start;
 }
 
 .rounded-corner {
