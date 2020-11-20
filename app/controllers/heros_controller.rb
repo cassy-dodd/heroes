@@ -1,5 +1,7 @@
 class HerosController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @heros = Hero.all
      @markers = @heros.map do |hero|
@@ -15,6 +17,8 @@ class HerosController < ApplicationController
   def show
     @hero = Hero.find(params[:id])
     @booking = Booking.new
+    @reviews = @hero.reviews
+    @review = Review.new
   end
 
   def new
