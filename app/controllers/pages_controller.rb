@@ -5,7 +5,9 @@ class PagesController < ApplicationController
   end
 
   def profile
+    # @heros = Hero.all
     @user = current_user
     @user_booking = current_user.bookings
+    # @hero = current_user.bookings.hero
   end
 end
