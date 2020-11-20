@@ -44,19 +44,40 @@
     </div>
     <div class="reviews" style="border-top-color: rgb(221, 221, 221);">
       <ul>
-        <h2>reviews (<%=@hero.reviews.count%>)</h2>
-        <% @hero.reviews.each do |review| %>
-          <li>
-            <div class="notification">
-              <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-              <div class="notification-content">
-                <p><small><%= Date.today.to_s(:long)%></small></p>
-                <p><%= review.content %></p>
-                <p><%= review.rating %></p>
+        <% if @hero.reviews.blank? %>
+          Be the first to leave a review for <strong><%= @hero.title %></strong>
+        <% else %>
+          <h2>reviews (<%=@hero.reviews.count%>)</h2>
+          <% @hero.reviews.each do |review| %>
+            <li>
+              <div class="notification">
+                <img src='https://res.cloudinary.com/dtulzuk5j/image/upload/v1605874354/Dorian-profile-pic-square_q5lm5n.jpg' class="avatar-large" />
+                <div class="notification-content">
+                  <p><small><%= Date.today.to_s(:long)%></small></p>
+                  <p><%= review.content %></p>
+                  <div class="stars" style="display: flex;">
+                      <% count = 0 %>
+                      <% 5.times do %>
+                        <% if review.rating > count %>
+                          <i class="fas fa-star"></i>
+                        <% else %>
+                          <i class="far fa-star" style="font-size:24px;"></i>
+                        <% end %>
+                        <% count += 1 %>
+                      <% end %>
+                  </div>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
+          <% end %>
         <% end %>
+          <div class="container">
+            <%= simple_form_for [ @hero, @review ] do |f| %>
+              <%= f.input :rating, collection: 0..5 %>
+              <%= f.input :content %>
+              <%= f.submit "Submit review", class: "btn btn new-hero-submit-button mb-5" %>
+            <% end %>
+          </div>
       </ul>
     </div>
   </div>

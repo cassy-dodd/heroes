@@ -18,6 +18,7 @@ class HerosController < ApplicationController
     @hero = Hero.find(params[:id])
     @booking = Booking.new
     @reviews = @hero.reviews
+    @review = Review.new
   end
 
   def new

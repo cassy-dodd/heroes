@@ -1,18 +1,15 @@
 class ReviewsController < ApplicationController
 
-  def new
-    @hero = Hero.find(params[:hero_id])
-    @review = Review.new
-  end
-
   def create
+    @booking = Booking.new
     @review = Review.new(review_params)
     @hero = Hero.find(params[:hero_id])
     @review.hero = @hero
-    if @review.save
+    @review.user = current_user
+    if @review.save!
       redirect_to hero_path(@hero)
     else
-      render :new
+      render "heros/show"
     end
   end
 
