@@ -109,3 +109,70 @@ hero_6 = Hero.new(
 )
 hero_6.photo.attach(io: File.open('app/assets/images/look-good.jpg'), filename: 'look-good.jpg')
 hero_6.save!
+
+hero_7 = Hero.new(
+  title: "Tasty crabs night!",
+  superpower: "Best crab cook",
+  price: "50",
+  description: "This will be the best crabs you'll ever have in your life.",
+  availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
+  city: "Berlin",
+  user: dorian,
+
+)
+hero_7.photo.attach(io: File.open('app/assets/images/crabs.jpg'), filename: 'crabs.jpg')
+hero_7.save!
+
+hero_8 = Hero.new(
+  title: "Piss off your neighbor!",
+  superpower: "Always poop-ready.",
+  price: "100",
+  description: "Will poop in your neighbours letterbox.",
+  availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
+  city: "Berlin",
+  user: dorian,
+
+)
+hero_8.photo.attach(io: File.open('app/assets/images/poopbox.jpg'), filename: 'poopbox.jpg')
+hero_8.save!
+
+hero_9 = Hero.new(
+  title: "Driverman!",
+  superpower: "Amazing driver",
+  price: "40",
+  description: "Will drive you and your friends home after a big night out",
+  availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
+  city: "Berlin",
+  user: dorian,
+
+)
+hero_9.photo.attach(io: File.open('app/assets/images/driver.jpg'), filename: 'driver.jpg')
+hero_9.save!
+
+hero_10 = Hero.new(
+  title: "Punch the bully",
+  superpower: "Punching bullies!",
+  price: "20",
+  description: "Will punch the bully that has been bothering you at school",
+  availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
+  city: "Madrid",
+  user: dorian,
+
+)
+hero_10.photo.attach(io: File.open('app/assets/images/punchthebully.jpg'), filename: 'punchthebully.jpg')
+hero_10.save!
+
+hero_11 = Hero.new(
+  title: "Light up your party!",
+  superpower: "Be super funny at parties",
+  price: "20",
+  description: "Will be super fun to be around and make everyone have a good time.",
+  availability: DateTime.strptime("20/11/2020 17:00", "%d/%m/%Y %H:%M"),
+  city: "London",
+  user: dorian,
+
+)
+hero_11.photo.attach(io: File.open('app/assets/images/funnyguy.jpg'), filename: 'funnyguy.jpg')
+hero_11.save!
+
+
