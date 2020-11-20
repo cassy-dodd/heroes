@@ -1,6 +1,7 @@
 class Hero < ApplicationRecord
   belongs_to :user
 
+  has_many :reviews, dependent: :destroy
   has_one_attached :photo
   has_many :bookings
   belongs_to :user
