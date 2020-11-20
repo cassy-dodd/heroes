@@ -42,7 +42,7 @@
     <div class="booking-section col-4">
     <%= render 'bookings/booking' %>
     </div>
-    <div class="reviews" style="border-top-color: rgb(221, 221, 221);">
+    <div class="reviews container" style="display:flex; border-top-color: rgb(221, 221, 221);">
       <ul>
         <% if @hero.reviews.blank? %>
           Be the first to leave a review for <strong><%= @hero.title %></strong>
